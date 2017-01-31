@@ -1,4 +1,5 @@
 DEBUG = 0
+PACKAGE_VERSION = 1.1
 
 ifeq ($(SIMULATOR),1)
 	TARGET = simulator:clang:latest
@@ -17,6 +18,7 @@ include $(THEOS_MAKE_PATH)/tweak.mk
 
 all::
 ifeq ($(SIMULATOR),1)
-	@cp -v $(PWD)/.theos/$(THEOS_OBJ_DIR_NAME)/*.dylib /opt/simject
+	@rm -f /opt/simject/$(TWEAK_NAME).dylib
+	@cp -v $(THEOS_OBJ_DIR)/*.dylib /opt/simject
 	@cp -v $(PWD)/*.plist /opt/simject
 endif
