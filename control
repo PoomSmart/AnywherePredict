@@ -5,5 +5,6 @@ Version: 1.0
 Architecture: iphoneos-arm
 Description: Predictive keyboard anywhere.
 Author: PoomSmart
+Maintainer: PoomSmart
 Section: Tweaks
-Depiction: http://PoomSmart.github.io/repo/anywherepredict/index.html
+Depiction: https://poomsmart.github.io/repo/anywherepredict/index.html
