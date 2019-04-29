@@ -5,7 +5,7 @@
 
 %group iOS10Up
 
-- (BOOL)predictionForTraitsWithForceEnable: (BOOL)force {
+- (BOOL)predictionForTraitsWithForceEnable:(BOOL)force {
     UITextInputTraits *traits = MSHookIvar<UITextInputTraits *>(self, "m_traits");
     BOOL wasNo1 = traits.autocorrectionType == UITextAutocorrectionTypeNo;
     BOOL wasNo2 = traits.disablePrediction;
