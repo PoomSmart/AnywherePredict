@@ -32,7 +32,7 @@ void posthook(UIKeyboardImpl *self, int x) {
 %hook UIPredictionViewController
 
 - (BOOL)isVisibleForInputDelegate:(id)delegate inputViews:(id)inputViews {
-    UIKeyboardImpl *impl = [UIKeyboardImpl activeInstance];
+    UIKeyboardImpl *impl = [UIKeyboardImpl sharedInstance];
     int x = prehook(impl);
     BOOL orig = %orig;
     posthook(impl, x);
